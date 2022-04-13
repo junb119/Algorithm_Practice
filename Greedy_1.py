@@ -10,6 +10,9 @@
 단, 거슬러 줘야 할 돈 N은 항상 10의 배수이다.
 
 '''
+import time
+
+s_time = time.time()
 
 coin_type= [500, 100, 50, 10]
 coin_num = 0
@@ -20,3 +23,13 @@ for coin in coin_type :
     N %= coin
     
 print(coin_num)
+
+e_time = time.time()
+
+print(f'소요 시간 :  {e_time - s_time}')
+
+'''
+그리드 알고리즘 문제에서는 문제 풀이를 위한 최소한의 아이디어를 떠올리고 
+이것이 정당한지 검토할 수 있어야 답을 도출할 수 있다.
+'''
+
