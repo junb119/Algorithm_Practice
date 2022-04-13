@@ -30,10 +30,13 @@
 
 '''
 
-
 n, m ,k = map(int, input().split())
 
 data = list(map(int, input().split()))
+
+import time
+
+s_time = time.time()
 
 
 data.sort()
@@ -58,4 +61,6 @@ for i in range(1, m+1) :
 print(f'={sum}')
 
 
-        
+    
+e_time = time.time()
+print(f'소요시간 : {e_time-s_time}')

@@ -12,11 +12,11 @@
 '''
 import time
 
-s_time = time.time()
 
 coin_type= [500, 100, 50, 10]
 coin_num = 0
 N = int(input('거스름돈 : '))
+s_time = time.time()
 
 for coin in coin_type :    
     coin_num += N // coin
