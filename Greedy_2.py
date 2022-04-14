@@ -29,38 +29,28 @@
 - 첫째 줄에 동빈이의 큰 수의 법칙에 따라 더해진 답을 출력한다.
 
 '''
+import time
 
-n, m ,k = map(int, input().split())
+# N, M, K를 공백으로 구분하여 입력받기
+n, m, k = map(int, input().split())
 
+# N개의 수를 공백으로 구분하여 입력받기
 data = list(map(int, input().split()))
 
-import time
 
 s_time = time.time()
 
-
 data.sort()
-first = data[n - 1]
-second = data[n - 2]
-sum = 0
-#0 1 2 3 4 5 6 7
-1 % 3
-2 % 3
-3 % 3
-for i in range(1, m+1) :
-    if m == 0 :
-        break
-    if i % (k+1) == 0:
-        print(second, '+', end=' ')
-        sum += second
-    else:
-        print(first, '+', end=' ')
-        sum += first
-# 0 1 2 3 4 5 6 7
-        
-print(f'={sum}')
+first = data[ n - 1 ]
+second = data[ n - 2] 
 
+count = int(m / (k + 1) * k)
+count += m % (k + 1)
 
-    
+result = 0
+result += (count) * first 
+result += (m - count) * second
+
+print(result)
 e_time = time.time()
-print(f'소요시간 : {e_time-s_time}')
+print(e_time-s_time)
