@@ -7,8 +7,8 @@ for i in range(n) :
     data = list(map(int, input().split()))
     min_value = 10001
     for i in data :
-        min_value = min(min_value, i)
-        
+        min_value = min(min_value, i)  
+    
     result = max(result, min_value)
     
 print(result)

@@ -1,1 +1,2 @@
-print(max(4,5,3))
+a = bool(int(input()))
+print(not a)
